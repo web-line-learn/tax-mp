@@ -1,0 +1,136 @@
+<template>
+    <view class="container">
+        <view class="header">
+            <image src="/asserts/image/login.png" mode="aspectFit" class="loginImg"
+          lazy-load="false"/>
+        </view>
+
+        <view class="main">
+            <view class="inputView">
+                <input class="input" value="" type="text" auto-focus focus="true" password="false" placeholder="用户名/注册手机号" placeholder-class="placeholder"
+              maxlength="140" /> 
+            </view>
+            <view class="inputView pwdView">
+                <input class="input pwdInput" value="" password  placeholder="请输入账户密码" placeholder-class="placeholder"
+              maxlength="140" /> 
+                <button class="forgetBtn" plain="true" disabled="false">
+                    | 忘记密码?
+                </button>    
+            </view>
+             <button id="button" size="default" type="default" form-type="submit" disabled="false">
+              登录
+            </button>
+        </view>
+
+        <view class="footer">
+           <navigator url="/pages/login/login-by-mobile" open-type="navigate" hover-class="none">
+               <text class="loginByCode">手机验证码登录</text>
+           </navigator> 
+        </view>
+    </view>
+</template>
+<script>
+import wepy from 'wepy';
+export default class Login extends wepy.page {
+    config = {
+      navigationBarTitleText: '登录'
+    }
+    
+    //可用于页面模板绑定的数据
+    data = {
+        motto: 'Hello World',
+        userInfo: {}
+    };
+
+    //事件处理函数(集中保存在methods对象中)
+    methods = {
+        bindViewTap () {
+            console.log('button clicked');
+        },
+        doLogin(){
+             wepy.request({
+                url: 'https://www.madcoder.cn/tests/sleep.php?time=1&t=css&c=' + map[i] + '&i=' + i,
+                success: function (d) {
+                    console.log(data);
+                }
+            })
+        }
+    };
+
+    //页面的生命周期函数
+    onLoad() {
+        console.log('onLoad');
+    };
+}
+</script>
+
+<style lang="less" scoped>
+    .container{
+        view {
+            width:100%;
+        }
+    }
+    
+    .header{
+        text-align: center;
+        height:20%;
+        padding:30rpx;
+
+        .loginImg{
+            width: 150rpx;
+            height:150rpx;
+        }
+    }
+
+    
+    .main{
+        .inputView{
+            width:85%;
+            margin:0rpx 50rpx;
+            padding:50rpx 0rpx 20rpx 0rpx;
+            border-bottom: solid 2rpx #F3F3F3;
+            .input{
+                width: 80%;
+            }
+            
+        }
+        
+        .pwdView{
+            position:relative;
+            .pwdInput{
+                width:80%;
+            }
+            .forgetBtn{
+                position:absolute;
+                right:0rpx;
+                bottom:10rpx;
+                background:#FFFFFF;
+                border:0rpx;
+                font-size: 35rpx;
+                color:#808080
+                
+            }
+        }
+        
+         #button{
+            width:95%;
+            padding:0rpx 0rpx;
+            background:#4580FE;
+            color:azure;
+            margin-top:80rpx;
+        }
+    }
+    
+
+    .footer{
+        .loginByCode{
+            margin-top: 50rpx;
+            position:absolute;
+            right:50rpx;
+            font-size: 70%;
+            color:#4F85FE
+
+        }
+    }
+    
+</style>
