@@ -16,9 +16,9 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
+      'pages/login/login',
       'pages/index',
-      'pages/login/login-by-mobile',
-      'pages/login/login'
+      'pages/login/login-by-mobile'
     ],
     window: {
       backgroundTextStyle: 'light',

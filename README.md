@@ -29,11 +29,15 @@
 	|   └── app.wpy            小程序配置项（全局数据、样式、声明钩子等；经build后，会在dist目录下生成app.js、app.json和app.wxss文件）
 	└── package.json           项目的package配置
 
+## pages目录结构定义
+	 一人一个目录开发避免冲突,通用样式等页面修改群交流及时pull和push,或者主负责人负责
 
-## [单文件模式，目录结构更清晰，开发更方便](https://tencent.github.io/wepy/document.html#/?id=%E5%8D%95%E6%96%87%E4%BB%B6%E6%A8%A1%E5%BC%8F%EF%BC%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E6%9B%B4%E6%B8%85%E6%99%B0%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9B%B4%E6%96%B9%E4%BE%BF)
-	原生小程序要求app实例必须有3个文件：app.js、app.json、app.wxss，而page页面则一般有4个文件：page.js、page.json、page.wxml、page.wxss，并且还要求app实例的3个文件以及page页面的4个文件除后缀名外必须同名，具体可参看官方目录结构。
-
-	而在WePY中则使用了单文件模式，将原生小程序app实例的3个文件统一为app.wpy，page页面的4个文件统一为page.wpy。使用WePY开发前后的开发目录结构对比如下：
+		login 登录 (2个设计页面)
+		bill 账单 (1个设计页面)
+		store 店铺 (5个设计页面)
+		demand 需求 (6个设计页面)
+		user  个人设置 (12个设计页面)
+		refund 需求退款(11个设计页面) 
 
 
 ## [wepy.config.js配置文件说明](https://tencent.github.io/wepy/document.html#/?id=wepyconfigjs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)
