@@ -17,7 +17,6 @@ export default class extends wepy.app {
   config = {
     pages: [
       'pages/login/login',
-      'pages/index',
       'pages/login/login-by-mobile'
     ],
     window: {
@@ -29,7 +28,8 @@ export default class extends wepy.app {
   }
 
   globalData = {
-    userInfo: null
+    userInfo: null,
+    loginUrl:'http://172.17.6.115:7117/tax-mp/mp/login/'
   }
 
   constructor () {

@@ -9,12 +9,23 @@
    
 - [下载小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 	导入dist目录查看效果,appid使用小程序测试号
+- 开发者工具->设置->项目设置  只勾选"不校验合法域名、...",其他全部不勾选
 - [代码高亮设置](https://tencent.github.io/wepy/document.html#/?id=%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE) 参考VS Code设置部分
 - 推荐插件 搜索关键词 wepy,全部安装 
 
 # wepy参考文档
 - [wepy github](https://github.com/Tencent/wepy)
 - [官方文档] (https://tencent.github.io/wepy/document.html#/)
+
+# 常用wepy api 记录
+在Page页面实例中，可以通过this.$parent来访问App实例
+组件使用,通信与交互[文档参考](https://tencent.github.io/wepy/document.html#/?id=%E7%BB%84%E4%BB%B6)
+数据绑定方式调整 [数据绑定](https://tencent.github.io/wepy/document.html#/?id=%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A)
+使用WePY提供的全局拦截器对原生API的请求进行拦截 [interceptor 拦截器](https://tencent.github.io/wepy/document.html#/?id=interceptor-%E6%8B%A6%E6%88%AA%E5%99%A8)
+其他开发模式转换 [开发模式转换](https://tencent.github.io/wepy/document.html#/?id=%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2)
+
+## 通用组件放在mixins 下面
+src\mixins\login.js 通用登录功能
     
 ## WePY项目的目录结构
 	├── dist                   小程序运行代码目录（该目录由WePY的build指令自动编译生成，请不要直接修改该目录下的文件）

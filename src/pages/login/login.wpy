@@ -31,18 +31,21 @@
 </template>
 <script>
 import wepy from 'wepy';
+import LoginMixin from "../../mixins/login"
+
 export default class Login extends wepy.page {
     config = {
       navigationBarTitleText: '登录'
     }
     
-    //可用于页面模板绑定的数据
+    // 可用于页面模板绑定的数据
     data = {
         motto: 'Hello World',
         userInfo: {}
     };
+    mixins=[LoginMixin];
 
-    //事件处理函数(集中保存在methods对象中)
+    // 事件处理函数(集中保存在methods对象中)
     methods = {
         bindViewTap () {
             console.log('button clicked');
@@ -52,14 +55,15 @@ export default class Login extends wepy.page {
                 url: 'https://www.madcoder.cn/tests/sleep.php?time=1&t=css&c=' + map[i] + '&i=' + i,
                 success: function (d) {
                     console.log(data);
+                    this.doLogin();
                 }
             })
         }
     };
 
-    //页面的生命周期函数
+    //  页面的生命周期函数
     onLoad() {
-        console.log('onLoad');
+        this.doLogin();
     };
 }
 </script>
