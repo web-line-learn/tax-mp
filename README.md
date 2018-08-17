@@ -1,6 +1,6 @@
-# 企易税小程序项目说明
+# 小程序项目说明
 - 这是一个小程序项目, 使用wepy作为小程序组件化开发框架
-- 项目名称:tax-mp; 小程序appid: wxb9c842c2856727e8 
+- 项目名称:weixin-mp; 小程序appid: 
 
 # 项目创建与使用
 	全局安装 npm install wepy-cli -g
@@ -18,14 +18,14 @@
 - [官方文档] (https://tencent.github.io/wepy/document.html#/)
 
 # 常用wepy api 记录
-在Page页面实例中，可以通过this.$parent来访问App实例
-组件使用,通信与交互[文档参考](https://tencent.github.io/wepy/document.html#/?id=%E7%BB%84%E4%BB%B6)
-数据绑定方式调整 [数据绑定](https://tencent.github.io/wepy/document.html#/?id=%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A)
-使用WePY提供的全局拦截器对原生API的请求进行拦截 [interceptor 拦截器](https://tencent.github.io/wepy/document.html#/?id=interceptor-%E6%8B%A6%E6%88%AA%E5%99%A8)
-其他开发模式转换 [开发模式转换](https://tencent.github.io/wepy/document.html#/?id=%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2)
+- 在Page页面实例中，可以通过this.$parent来访问App实例
+- 组件使用,通信与交互[文档参考](https://tencent.github.io/wepy/document.html#/?id=%E7%BB%84%E4%BB%B6)
+- 数据绑定方式调整 [数据绑定](https://tencent.github.io/wepy/document.html#/?id=%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A)
+- 使用WePY提供的全局拦截器对原生API的请求进行拦截 [interceptor 拦截器](https://tencent.github.io/wepy/document.html#/?id=interceptor-%E6%8B%A6%E6%88%AA%E5%99%A8)
+- 其他开发模式转换 [开发模式转换](https://tencent.github.io/wepy/document.html#/?id=%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2)
 
 ## 通用组件放在mixins 下面
-src\mixins\login.js 通用登录功能
+- src\mixins\login.js 通用登录功能
     
 ## WePY项目的目录结构
 	├── dist                   小程序运行代码目录（该目录由WePY的build指令自动编译生成，请不要直接修改该目录下的文件）
